@@ -1,0 +1,5 @@
+services:
+  adminer:
+    image: joltdesign/adminer
+    build:
+      context: build
