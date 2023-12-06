@@ -1,8 +1,11 @@
 {
-  "name": "jolt-adminer",
+  "name": "@joltdesignltd/jolt-adminer",
   "version": "1.0.0",
   "repository": "git@bitbucket.org:joltdesignltd/jolt-adminer.git",
-  "author": "Jolt Design <studio@joltdesign.co.uk>",
+  "author": {
+    "name": "Jolt Design",
+    "email": "studio@joltdesign.co.uk"
+  },
   "license": "None",
   "private": true,
   "jira-prepare-commit-msg": {
