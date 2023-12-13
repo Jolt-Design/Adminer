@@ -32,9 +32,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@joltdesignltd/jolt-adminer@workspace:.":
+"@joltdesign/jolt-adminer@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@joltdesignltd/jolt-adminer@workspace:."
+  resolution: "@joltdesign/jolt-adminer@workspace:."
   dependencies:
     husky: "npm:^8.0.3"
     jira-prepare-commit-msg: "npm:^1.7.2"
