@@ -1,7 +1,20 @@
-FROM adminer:latest
+ARG ADMINER_VERSION=4.8.4
+ARG CURL_VERSION=8.10.1
 
-# Store PHP Configs at /usr/local/etc/php/conf.d
+FROM curlimages/curl-base:${CURL_VERSION} AS downloader
+
+RUN mkdir -p /work
+
+ARG ADMINER_VERSION
+
+RUN curl -L -o /work/adminer.php https://github.com/adminerevo/adminerevo/releases/download/v${ADMINER_VERSION}/adminer-${ADMINER_VERSION}.php
+
+FROM joltdesign/php:8.2 AS server
+
+ENV LISTEN_PORT=8080
+
+COPY --from=downloader /work/adminer.php /var/www/html/index.php
 COPY --chown=root:root ./php-conf.d/* /usr/local/etc/php/conf.d/
 
-# We expose Adminer on port 8080 (Adminer's default)
-EXPOSE 8080
+RUN sed -ri -e "s!<VirtualHost \*:80>!<VirtualHost *:${LISTEN_PORT}>!g" /etc/apache2/sites-available/*.conf
+RUN sed -ri -e "s!Listen 80!Listen ${LISTEN_PORT}!g" /etc/apache2/ports.conf
