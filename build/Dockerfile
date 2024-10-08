@@ -13,7 +13,8 @@ FROM joltdesign/php:8.2 AS server
 
 ENV LISTEN_PORT=8080
 
-COPY --from=downloader /work/adminer.php /var/www/html/index.php
+COPY --from=downloader /work/adminer.php /var/www/html/adminer.php
+COPY --chown=root:root ./src/ /var/www/html/
 COPY --chown=root:root ./php-conf.d/* /usr/local/etc/php/conf.d/
 
 RUN sed -ri -e "s!<VirtualHost \*:80>!<VirtualHost *:${LISTEN_PORT}>!g" /etc/apache2/sites-available/*.conf
