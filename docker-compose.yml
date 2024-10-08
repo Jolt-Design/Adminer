@@ -3,3 +3,5 @@ services:
     image: joltdesign/adminer
     build:
       context: build
+    ports:
+      - 8080:80
