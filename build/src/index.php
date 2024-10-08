@@ -11,6 +11,7 @@ function adminer_object() {
 
     $plugins = [
         new AdminerPrettyJsonColumn(null),
+        new AdminerJoltDefaultCredentials(),
     ];
 
     return new AdminerPlugin($plugins);
