@@ -1,5 +1,5 @@
 ARG ADMINER_VERSION=4.8.4
-ARG CURL_VERSION=8.10.1
+ARG CURL_VERSION=8.13.0
 
 FROM curlimages/curl-base:${CURL_VERSION} AS downloader
 
