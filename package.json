@@ -1,7 +1,7 @@
 {
   "name": "@joltdesign/jolt-adminer",
   "version": "1.0.0",
-  "repository": "git@bitbucket.org:joltdesignltd/jolt-adminer.git",
+  "repository": "git@github.com:Jolt-Design/Adminer.git",
   "author": {
     "name": "Jolt Design",
     "email": "studio@joltdesign.co.uk"
