@@ -16,7 +16,9 @@
     "deploy": "run-s build tag push",
     "prepare": "husky",
     "push": "sh bin/push.sh",
-    "tag": "sh bin/tag.sh"
+    "tag": "sh bin/tag.sh",
+    "bake": "docker buildx bake",
+    "bake:push": "run bake --push"
   },
   "devDependencies": {
     "husky": "^9.1.7",
