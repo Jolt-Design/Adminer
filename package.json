@@ -9,7 +9,8 @@
   "license": "None",
   "private": true,
   "jira-prepare-commit-msg": {
-    "messagePattern": "$J $M"
+    "messagePattern": "$J $M",
+    "ignoredBranchesPattern": "^dependabot/"
   },
   "scripts": {
     "build": "sh bin/build.sh",
