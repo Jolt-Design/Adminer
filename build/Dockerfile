@@ -17,5 +17,5 @@ COPY --from=downloader /work/adminer.php /var/www/html/adminer.php
 COPY --chown=root:root ./src/ /var/www/html/
 COPY --chown=root:root ./php-conf.d/* /usr/local/etc/php/conf.d/
 
-RUN sed -ri -e "s!<VirtualHost \*:80>!<VirtualHost *:${LISTEN_PORT}>!g" /etc/apache2/sites-available/*.conf
-RUN sed -ri -e "s!Listen 80!Listen ${LISTEN_PORT}!g" /etc/apache2/ports.conf
+RUN sed -ri -e "s!<VirtualHost \*:80>!<VirtualHost *:${LISTEN_PORT}>!g" /etc/apache2/sites-available/*.conf \
+    && sed -ri -e "s!Listen 80!Listen ${LISTEN_PORT}!g" /etc/apache2/ports.conf
