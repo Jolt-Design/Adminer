@@ -27,7 +27,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
-          ["husky", "npm:9.1.6"],\
+          ["husky", "npm:9.1.7"],\
           ["jira-prepare-commit-msg", "npm:1.7.2"],\
           ["npm-run-all", "npm:4.1.5"]\
         ],\
@@ -72,7 +72,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@joltdesign/jolt-adminer", "workspace:."],\
-          ["husky", "npm:9.1.6"],\
+          ["husky", "npm:9.1.7"],\
           ["jira-prepare-commit-msg", "npm:1.7.2"],\
           ["npm-run-all", "npm:4.1.5"]\
         ],\
@@ -619,10 +619,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["husky", [\
-      ["npm:9.1.6", {\
-        "packageLocation": "./.yarn/cache/husky-npm-9.1.6-f05821288d-705673db4a.zip/node_modules/husky/",\
+      ["npm:9.1.7", {\
+        "packageLocation": "./.yarn/cache/husky-npm-9.1.7-5b02eaabc4-35bb110a71.zip/node_modules/husky/",\
         "packageDependencies": [\
-          ["husky", "npm:9.1.6"]\
+          ["husky", "npm:9.1.7"]\
         ],\
         "linkType": "HARD"\
       }]\
