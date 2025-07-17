@@ -1,6 +1,6 @@
 ARG ADMINER_VERSION=4.8.4
 
-FROM curlimages/curl-base:8.14.1 AS downloader
+FROM curlimages/curl-base:8.15.0 AS downloader
 
 RUN mkdir -p /work
 
