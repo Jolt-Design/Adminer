@@ -1,6 +1,10 @@
 name: build-and-push
 
 on:
+  workflow_dispatch:
+  schedule:
+    # Run every day at 4:20
+    - cron: '20 4 * * *'
   push:
     branches: [master]
 
