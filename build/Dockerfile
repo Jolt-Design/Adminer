@@ -8,7 +8,7 @@ ARG ADMINER_VERSION
 
 RUN curl -L -o /work/adminer.php https://github.com/adminerevo/adminerevo/releases/download/v${ADMINER_VERSION}/adminer-${ADMINER_VERSION}.php
 
-FROM joltdesign/php:8.4 AS server
+FROM joltdesign/php:8.5 AS server
 
 ENV LISTEN_PORT=8080
 
